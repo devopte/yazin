@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    transition: 1s;
+    --sb-track-color: #232e33;
+    --sb-thumb-color: #dd3a46;
+    --sb-size: 10px;
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    background-color: var(--primary-color);
+    font-family: Montserrat;
+}
+
+p::selection
+{
+    background-color: #DD3A46;
+}
+
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+
+}
+
+:root {
+
+    --primary-color: #1e1e1e;
+    --secondary-color: #E2E2E2;
+}
+
+.dark-mode {
+
+    --primary-color: #E2E2E2;
+    --secondary-color: #1e1e1e;
+    transition: 1s;
+}
+
+.main-para {
+    text-align: left;
+    padding-top: 15%;
+    z-index: 2;
+    width: 100%;
+
+}
+
+.iam {
+    color: #6f6f6f;
+    text-align: center;
+
+    font-size: 134px;
+    font-style: normal;
+    font-weight: bolder;
+    font-variant: small-caps;
+    letter-spacing: -2.68px;
+    line-height: 93.506%;
+}
+
+.main-name {
+    color: #DD3A46;
+    text-align: center;
+    width: 100%;
+    font-size: 174px;
+    font-style: normal;
+    font-weight: bolder;
+    font-variant: small-caps;
+    letter-spacing: -30px;
+    line-height: 03.506%;
+
+}
+
+.bg-color-white {
+    background-color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.48px;
+}
+
+.nav-link:hover {
+    color: #DD3A46;
+
+    transition: 300ms;
+}
+.nav-link::selection
+{
+    background-color: #DD3A46;
+}
+.nav-link:active{
+    color: #DD3A46;
+}
+
+.yazin-image {
+    height: 90vh;
+    width: auto;
+    flex-shrink: 0;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    z-index: 3;
+
+}
+
+.just-space {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .vanish {
+        display: none;
+    }
+
+    .yazin-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: 19%;
+        height: auto;
+        width: 110vw;
+    }
+    .iam {
+        font-size: 40px;
+        text-align: left;
+        margin-left: 3%;
+        line-height: 33.506%;
+    }
+
+    .main-name {
+        text-align: center;
+        font-size: 40px;
+        line-height: 33.506%;
+        letter-spacing: -6px
+    }
+
+
+
+    .main-para {
+        text-align: left;
+        padding: 20px;
+        padding-top: 25%;
+
+        z-index: 2;
+
+    }
+
+    .sidebar {
+        top: 60%;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    right: 1%;
+    top: 40%;
+
+    padding: 10px;
+
+    z-index: 5;
+    width: 50px;
+}
+
+.sidebar-1 {
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+}
+
+.sidebar-2 {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    padding-top: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.headings {
+    color: #DD3A46;
+    text-align: center;
+
+    font-size: 300%;
+    font-style: normal;
+    font-weight: bolder;
+    font-variant: small-caps;
+    letter-spacing: -1.68px;
+
+
+}
+
+.yazin-image::selection
+{
+    background-color: #59595914;
+
+}
+.ani::selection
+{
+    background-color: #595959;
+}
+
+.btn-cust {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid rgb(252, 70, 100);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.btn-cust::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 70, 70);
+    transform: translateX(-100%);
+    transition: all 2s;
+    z-index: -1;
+    animation: filled 4s infinite;
+}
+
+.btn-cust:hover::before {
+    transform: translateX(0);
+    animation: none;
+}
+@keyframes filled {
+    0%{
+        background-color: rgb(252, 70, 70);
+        transform: translateX(-100%);
+    }
+    50%{
+        background-color: rgb(252, 70, 70);
+        transform: translateX(0%);
+    }
+    100%{
+        background-color: rgb(252, 70, 70);
+        transform: translateX(-100%);
+    }
+}
+
+
+.cardsas {
+    --bg: #f7f7f8;
+    --hover-bg: #FFE5F4;
+    --hover-text: #E50087;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: var(--bg);
+    padding: 1.5em;
+    padding-block: 1.8em;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6, .4, 0, 1), transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.cardsas__body {
+    color: #464853;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.cardsas> :not(span) {
+    transition: .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.cardsas>strong {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: -.035em;
+}
+
+.cardsas span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--hover-text);
+    border-radius: 5px;
+    font-weight: bold;
+    top: 100%;
+    transition: all .3s cubic-bezier(.6, .4, 0, 1);
+}
+
+.cardsas:hover span {
+    top: 0;
+    font-size: 1.2em;
+}
+
+.cardsas:hover {
+    background: var(--hover-bg);
+}
+
+.cardsas:hover>div,
+.cardsas:hover>strong {
+    opacity: 0;
+}
+.skillset-svg {
+    border: 2px solid var(--secondary-color);
+
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 1;
+
+}
+
+.skillset-svg:hover {
+    border: 2px solid violet;
+}
+.sr-headings {
+    color: var(--secondary-color);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    font-variant: small-caps;
+    letter-spacing: -0.36px;
+}
